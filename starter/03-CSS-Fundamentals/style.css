@@ -1,6 +1,12 @@
 body {
   color: #444;
   font-family: sans-serif;
+  border-top: 10px solid #1098ad;
+}
+
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
 }
 
 h1,
@@ -36,6 +42,11 @@ p {
 
 li {
   font-size: 20px;
+  margin-bottom: 10px;
+}
+
+li:last-child {
+  margin-bottom: 0%;
 }
 
 /* footer p {
@@ -57,10 +68,6 @@ li {
 
 .related {
   list-style: none;
-}
-
-.main-header {
-  background-color: #f7f7f7;
 }
 
 aside {
