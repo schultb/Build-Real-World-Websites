@@ -285,3 +285,13 @@ h1 {
 nav {
   float: right;
 }
+
+.clear {
+  clear: both;
+}
+/* Clearfix hack to get rid of height collapse caused by floats */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
