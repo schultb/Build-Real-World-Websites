@@ -9,7 +9,7 @@ FONT SIZE SYSTEM (px)
 :root {
   --green: #087f5b;
   --light-green: #099268;
-  --grey: #343a40;
+  --gray: #343a40;
   --light-gray: #495057;
   --white: #fff;
 }
@@ -25,7 +25,7 @@ FONT SIZE SYSTEM (px)
 /* ------------------------ */
 body {
   font-family: "Inter", sans-serif;
-  color: var(--grey);
+  color: var(--gray);
   border-bottom: 8px solid var(--green);
 }
 
