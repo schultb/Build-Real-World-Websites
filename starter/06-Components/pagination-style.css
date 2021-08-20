@@ -52,14 +52,21 @@ body {
   height: 44px;
   width: 44px;
 }
+
+.pointer :hover,
+:visited {
+  stroke: var(--white);
+  border: 2px solid var(--white);
+  background-color: var(--green);
+  border-radius: 50%;
+}
+
 .pointer-left,
 .pointer-right {
   stroke: var(--green);
-  /* background-color: var(--teal); */
   border: 2px solid var(--green);
   padding: 5px;
   border-radius: 50%;
-  /* padding: 20px; */
 }
 
 .numbers {
@@ -68,8 +75,18 @@ body {
   justify-content: space-evenly;
   gap: 50px;
 }
+
+.numbers :hover,
+:active {
+  color: var(--white);
+  background-color: var(--green);
+  padding: 5px;
+  border-radius: 50%;
+}
 .numbers-text {
   align-self: center;
+  padding: 5px;
+  border-radius: 50%;
 }
 .pointer-right {
 }
