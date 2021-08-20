@@ -84,6 +84,7 @@ body {
 
 .page-link:hover,
 .page-link:active,
+/* Below is and end selector: instead of a space after .page-link, you continue with the other class, thereby combining the two classes without a space separating them. */
 .page-link.page-link--current {
   background-color: var(--green);
   color: var(--white);
