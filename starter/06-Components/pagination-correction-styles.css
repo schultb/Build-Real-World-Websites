@@ -34,12 +34,15 @@ body {
   line-height: 1;
   font-size: 18px;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
 }
 
 .pagination {
-  width: 700px;
-  margin: 100px auto;
-  /* background-color: var(--teal); */
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 200px;
 }
 
 .btn {
@@ -49,6 +52,15 @@ body {
   border-radius: 50%;
   background: none;
   cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--green);
+}
+
+/* Without .btn:hover, the icon won't turn white unless the pointer is directly over the icon. By using the formula below, the icon turns white once the button is hovered over. */
+.btn:hover .btn-icon {
+  stroke: var(--white);
 }
 
 .btn-icon {
@@ -62,7 +74,6 @@ body {
   font-size: 18px;
   color: var(--dark-gray);
   text-decoration: none;
-  background-color: red;
   height: 36px;
   width: 36px;
   display: flex;
@@ -72,10 +83,12 @@ body {
 }
 
 .page-link:hover,
-.page-link:active {
+.page-link:active,
+.page-link.page-link--current {
   background-color: var(--green);
   color: var(--white);
 }
 
 .dots {
+  color: var(--dark-gray);
 }
