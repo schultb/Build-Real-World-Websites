@@ -7,10 +7,11 @@ FONT SIZE SYSTEM (px)
 */
 
 :root {
-  --gray: #444;
-  --light-gray: #f7f7f7;
+  --gray: #343a40;
+  --light-gray: #e9ecef;
   --orange: #e67e22;
   --white: #fff;
+  --violet: #7048e8;
 }
 
 * {
@@ -23,7 +24,43 @@ FONT SIZE SYSTEM (px)
 /* GENERAL STYLES */
 /* ------------------------ */
 
-html {
-  font-family: "Rubik", sans-serif;
+body {
+  font-family: sans-serif;
   color: var(--gray);
+  font-size: 24px;
+  height: 100vh;
+  text-align: center;
+  font-weight: bold;
+
+  display: grid;
+  grid-template-columns: 80px 400px 1fr 250px;
+  grid-template-rows: 80px 1fr;
+}
+
+nav,
+menu,
+section,
+main,
+aside {
+  padding-top: 24px;
+}
+
+nav {
+  background-color: var(--gray);
+  color: var(--white);
+  grid-row: 1/-1;
+}
+
+menu {
+  background-color: var(--violet);
+  color: var(--white);
+  grid-column: 2/-1;
+}
+
+section {
+  background-color: var(--light-gray);
+}
+
+aside {
+  background-color: var(--light-gray);
 }
