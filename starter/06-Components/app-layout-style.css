@@ -9,9 +9,12 @@ FONT SIZE SYSTEM (px)
 :root {
   --gray: #343a40;
   --light-gray: #e9ecef;
+  --medium-gray: #adb5bd;
   --orange: #e67e22;
   --white: #fff;
   --violet: #7048e8;
+  --dark-violet: #5f3dc4;
+  --pink: #d6336c;
 }
 
 * {
@@ -38,7 +41,6 @@ body {
 }
 
 nav,
-menu,
 section,
 main,
 aside {
@@ -53,14 +55,49 @@ nav {
 
 menu {
   background-color: var(--violet);
-  color: var(--white);
   grid-column: 2/-1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 40px;
 }
 
 section {
   background-color: var(--light-gray);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  overflow: scroll;
 }
 
 aside {
   background-color: var(--light-gray);
+}
+
+button {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: var(--dark-violet);
+  border: none;
+  cursor: pointer;
+  color: var(--white);
+  padding: 8px 12px;
+}
+
+button:last-child {
+  background-color: var(--pink);
+  margin-left: auto;
+}
+
+.email {
+  background-color: var(--medium-gray);
+  height: 96px;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
