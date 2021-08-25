@@ -53,9 +53,25 @@ SPACING SYSTEM (px)
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: sans-serif;
   line-height: 1;
   font-weight: 400;
   color: var(--gray);
+}
+
+.hero {
+  max-width: 130rem;
+  /* Margin below is trick to center content on page */
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.hero-img {
+  width: 100%;
 }
