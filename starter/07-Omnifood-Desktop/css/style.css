@@ -6,10 +6,15 @@ FONT SIZE SYSTEM (px)
 
 Font Weights:
 Default: 400
+Medium: 500
+Semi-bold: 600
+Bold: 700
 
 
 Line Heights:
 Default: 1
+Small: 1.05
+Paragraph default: 1.6
 
 ---02 COLORS
 Primary: #e67e22
@@ -27,6 +32,7 @@ Grays: #555
 ---05 SHADOWS
 
 ---06 BORDER-RADIUS
+Default: 9px
 
 ---07 WHITESPACE
 
@@ -123,7 +129,7 @@ body {
   margin-right: 1.6rem !important;
 }
 /* *************************
-      HEADER SECTION
+      HEADER
 ****************************
  */
 
@@ -141,6 +147,45 @@ body {
   height: 2.2rem;
 }
 
+/* *************************
+      NAVIGATION
+****************************
+ */
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--dark-gray);
+  font-weight: 500;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: var(--dark-primary);
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: var(--white);
+  background-color: var(--primary);
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: var(--dark-primary);
+}
 /* *************************
       HERO SECTION
 ****************************
