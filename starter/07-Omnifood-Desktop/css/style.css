@@ -51,6 +51,7 @@ SPACING SYSTEM (px)
 :root {
   --gray: #555;
   --dark-gray: #333;
+  --light-gray: #ddd;
   --white: #fff;
   --primary: #e67e22;
   --light-primary: #fdf2e9;
@@ -91,7 +92,8 @@ body {
 
 .grid {
   display: grid;
-  gap: 9.6rem;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
 }
 
 .grid--2-cols {
@@ -106,8 +108,13 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--center-vert {
+  align-items: center;
+}
+
 .heading-primary,
-.heading-secondary {
+.heading-secondary,
+.heading-tertiary {
   font-weight: 700;
   line-height: 1.05;
   color: var(--dark-gray);
@@ -126,6 +133,9 @@ body {
 }
 
 .heading-tertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
 }
 
 .subheading {
@@ -313,5 +323,23 @@ body {
 }
 
 .step-img {
-  width: 50%;
+  width: 35%;
+}
+
+.step-number {
+  font-size: 8.6rem;
+  font-weight: 600;
+  color: var(--light-gray);
+  margin-bottom: 1.2rem;
+}
+
+.step-description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+}
+
+.step-img-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
