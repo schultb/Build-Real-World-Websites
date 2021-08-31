@@ -24,6 +24,7 @@ Letter Spacing:
 Primary: #e67e22
 
 Tints: #fdf2e9
+#fae5d3
 
 Shades: #cf711f 
 
@@ -55,6 +56,7 @@ SPACING SYSTEM (px)
   --white: #fff;
   --primary: #e67e22;
   --light-primary: #fdf2e9;
+  --med-primary: #fae5d3;
   --dark-primary: #cf711f;
 }
 
@@ -342,4 +344,32 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+  content: "";
+  display: block;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.step-img-box::before {
+  width: 60%;
+  /* height: 60%; */
+
+  /* 60% of parent's width */
+  background-color: var(--light-primary);
+  padding-bottom: 60%;
+  z-index: -2;
+}
+.step-img-box::after {
+  width: 45%;
+  padding-bottom: 45%;
+  background-color: var(--med-primary);
+  z-index: -1;
 }
