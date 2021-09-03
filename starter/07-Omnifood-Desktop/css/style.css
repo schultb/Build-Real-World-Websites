@@ -21,16 +21,24 @@ Letter Spacing:
 0.75px;
 
 ---02 COLORS
-Primary: #e67e22
+Primary: 
+#e67e22
 
-Tints: #fdf2e9
+Tints: 
+#fdf2e9
 #fae5d3
+#94d82d
+#fcc419
 
-Shades: #cf711f 
+Shades: 
+#cf711f 
 
 Accents:
+#51cf66
 
-Grays: #555
+
+Grays: 
+#555
 #333
 #888
 
@@ -39,6 +47,7 @@ Grays: #555
 
 ---06 BORDER-RADIUS
 Default: 9px
+Medium: 11px
 
 ---07 WHITESPACE
 
@@ -60,6 +69,9 @@ SPACING SYSTEM (px)
   --light-primary: #fdf2e9;
   --med-primary: #fae5d3;
   --dark-primary: #cf711f;
+  --green: #51cf66;
+  --vegan: #94d82d;
+  --paleo: #fcc419;
 }
 
 /* *************************
@@ -81,6 +93,10 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--gray);
+}
+
+strong {
+  font-weight: 500;
 }
 
 /* *************************
@@ -416,6 +432,44 @@ body {
   padding: 9.6rem 0;
 }
 
+.meal {
+  box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.075);
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.meal-content {
+  padding: 3.2rem 4.8rem 4.8rem 4.8rem;
+}
+
+.meal-tags {
+  margin-bottom: 1.2rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  color: var(--dark-gray);
+  border-radius: 100px;
+  font-weight: 600;
+}
+
+.tag--vegetarian {
+  background-color: var(--green);
+}
+
+.tag--vegan {
+  background-color: var(--vegan);
+}
+
+.tag--paleo {
+  background-color: var(--paleo);
+}
+
 .meal-img {
   width: 100%;
 }
@@ -436,4 +490,13 @@ body {
 
 .meal-attribute {
   font-size: 1.8rem;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.meal-icon {
+  width: 2.4rem;
+  height: 2.4rem;
+  color: var(--primary);
 }
