@@ -41,6 +41,7 @@ Grays:
 #555
 #333
 #888
+#777
 
 
 ---05 SHADOWS
@@ -62,6 +63,7 @@ SPACING SYSTEM (px)
 :root {
   --gray: #555;
   --dark-gray: #333;
+  --med-light-gray: #777;
   --medium-gray: #888;
   --light-gray: #ddd;
   --white: #fff;
@@ -557,4 +559,39 @@ strong {
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
+}
+
+/* *************************
+      Testimonials Section
+****************************
+ */
+
+.section-testimonials {
+  padding: 9.6rem 0;
+}
+
+.testimonials {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4.8rem;
+}
+
+.testimonial-img {
+  width: 6.4rem;
+  border-radius: 50%;
+  margin-bottom: 1.2rem;
+}
+
+.testimonial-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 1.6rem;
+}
+
+.testimonial-name {
+  font-size: 1.6rem;
+  color: var(--med-light-gray);
+}
+
+.gallery {
 }
