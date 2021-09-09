@@ -567,6 +567,10 @@ strong {
  */
 
 .section-testimonials {
+  background-color: var(--light-primary);
+}
+
+.testimonials-container {
   padding: 9.6rem 0;
 }
 
@@ -594,4 +598,12 @@ strong {
 }
 
 .gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.6rem;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
 }
