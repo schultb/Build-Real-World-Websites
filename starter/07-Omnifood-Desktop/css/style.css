@@ -42,6 +42,7 @@ Grays:
 #333
 #888
 #777
+#6f6f6f
 
 
 ---05 SHADOWS
@@ -65,6 +66,7 @@ SPACING SYSTEM (px)
   --dark-gray: #333;
   --med-light-gray: #777;
   --medium-gray: #888;
+  --text-gray: #6f6f6f;
   --light-gray: #ddd;
   --white: #fff;
   --primary: #e67e22;
@@ -568,16 +570,21 @@ strong {
 
 .section-testimonials {
   background-color: var(--light-primary);
+  display: grid;
+  /* Making grid-template-column like percentages by using technique below */
+  grid-template-columns: 55fr 45fr;
+  align-items: center;
 }
 
 .testimonials-container {
-  padding: 9.6rem 0;
+  padding: 9.6rem;
 }
 
 .testimonials {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4.8rem;
+  row-gap: 4.8rem;
+  column-gap: 8rem;
 }
 
 .testimonial-img {
@@ -594,16 +601,30 @@ strong {
 
 .testimonial-name {
   font-size: 1.6rem;
-  color: var(--med-light-gray);
+  color: var(--text-gray);
 }
 
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.6rem;
+  padding: 1.6rem;
+}
+
+/* Use overflow: hidden to keep images from going past grid boundaries as the hover effect plays out. */
+.gallery-item {
+  overflow: hidden;
 }
 
 .gallery-item img {
   display: block;
   width: 100%;
+  /* Used the height and object-fit below to fill the grid boxes. Object-fit clips picture slightly, so may have to remove it later. */
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.4s;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
 }
