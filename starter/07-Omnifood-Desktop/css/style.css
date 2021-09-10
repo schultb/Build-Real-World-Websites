@@ -637,6 +637,39 @@ strong {
   padding: 9.6rem 0;
 }
 
+.pricing-plan {
+  border-radius: 1.1rem;
+
+  width: 75%;
+}
+
+.pricing-plan--starter {
+  justify-self: end;
+  border: 2px solid var(--light-primary);
+  padding: 4.6rem;
+}
+
+.pricing-plan--complete {
+  background-color: var(--light-primary);
+  padding: 4.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.pricing-plan--complete::after {
+  content: "Best value";
+  position: absolute;
+  top: 6%;
+  right: -18%;
+  color: var(--dark-gray);
+  background-color: var(--paleo);
+  padding: 0.8rem 8rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-weight: 700;
+  transform: rotate(45deg);
+}
+
 .plan-header {
   text-align: center;
   margin-bottom: 4.8rem;
