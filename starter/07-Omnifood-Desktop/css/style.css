@@ -32,6 +32,7 @@ Tints:
 
 Shades: 
 #cf711f 
+#45260a
 
 Accents:
 #51cf66
@@ -79,6 +80,7 @@ SPACING SYSTEM (px)
   --green: #51cf66;
   --vegan: #94d82d;
   --paleo: #fcc419;
+  --brown: #45260a;
 }
 
 /* *************************
@@ -776,6 +778,19 @@ strong {
 }
 
 .cta-text-box {
+  padding: 4.8rem 6.4rem 6.4rem 6.4rem;
+  color: var(--brown);
+}
+
+.cta .heading-secondary {
+  color: var(--brown);
+  margin-bottom: 3.2rem;
+}
+
+.cta-text {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  margin-bottom: 4.8rem;
 }
 
 .cta-img-box {
@@ -787,4 +802,11 @@ strong {
     url("../img/eating.jpg");
   background-size: cover;
   background-position: center;
+}
+
+.cta-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3.2rem;
+  row-gap: 2.4rem;
 }
