@@ -44,6 +44,7 @@ Grays:
 #888
 #777
 #6f6f6f
+#aaa
 
 
 ---05 SHADOWS
@@ -71,6 +72,7 @@ SPACING SYSTEM (px)
   --medium-gray: #888;
   --text-gray: #6f6f6f;
   --light-gray: #ddd;
+  --placeholder-gray: #aaa;
   --white: #fff;
   --primary: #e67e22;
   --light-orange: #eb984e;
@@ -185,7 +187,7 @@ strong {
   margin-bottom: 1.6rem;
   letter-spacing: 0.75px;
 }
-
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -193,9 +195,24 @@ strong {
   text-decoration: none;
   padding: 1.6rem 3.2rem;
   border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 
   /* transition: background-color 0.3s; */
   transition: all 0.3s;
+}
+
+.btn--form {
+  background-color: var(--brown);
+  color: var(--light-primary);
+  align-self: end;
+  padding: 1.2rem;
+}
+
+.btn--form:hover {
+  background-color: var(--white);
+  color: var(--gray);
 }
 
 .btn--full:link,
@@ -276,8 +293,13 @@ strong {
   height: 3rem;
   color: var(--primary);
 }
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem hsla(28, 80%, 52%, 0.5);
+}
 /* *************************
-      HEADER
+      HEADER  
 ****************************
  */
 
@@ -773,8 +795,6 @@ strong {
   border-radius: 11px;
   background-image: linear-gradient(to right bottom, #eb984e, #e67e22);
   overflow: hidden;
-
-  height: 50rem;
 }
 
 .cta-text-box {
@@ -809,4 +829,32 @@ strong {
   grid-template-columns: 1fr 1fr;
   column-gap: 3.2rem;
   row-gap: 2.4rem;
+}
+
+.cta-form label {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+}
+.cta-form input,
+.cta-form select {
+  width: 100%;
+  padding: 1.2rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  color: inherit;
+  border: none;
+  background-color: var(--light-primary);
+  border-radius: 9px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.cta-form input::placeholder {
+  color: var(--placeholder-gray);
+}
+
+.cta *:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem hsla(27, 83%, 95%, 0.5);
 }
