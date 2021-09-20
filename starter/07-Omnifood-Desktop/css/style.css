@@ -148,6 +148,10 @@ strong {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.grid--5-cols {
+  grid-template-columns: repeat(5, 1fr);
+}
+
 .grid--center-vert {
   align-items: center;
 }
@@ -857,4 +861,13 @@ strong {
 .cta *:focus {
   outline: none;
   box-shadow: 0 0 0 0.8rem hsla(27, 83%, 95%, 0.5);
+}
+
+/* *************************
+      FOOTER Section
+****************************
+ */
+
+.footer {
+  padding: 9.6rem 0;
 }
