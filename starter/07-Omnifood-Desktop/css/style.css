@@ -601,9 +601,6 @@ strong {
   color: var(--primary);
 }
 
-.diets {
-}
-
 .all-recipes {
   text-align: center;
   font-size: 1.8rem;
@@ -763,8 +760,6 @@ strong {
 ****************************
  */
 
-.feature {
-}
 .feature-icon {
   color: var(--primary);
   width: 3.2rem;
