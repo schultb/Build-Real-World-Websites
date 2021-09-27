@@ -100,6 +100,7 @@ SPACING SYSTEM (px)
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 body {
@@ -107,6 +108,9 @@ body {
   line-height: 1;
   font-weight: 400;
   color: var(--gray);
+
+  /* Only works if there is nothing absolutely positioned in relation to the body */
+  overflow-x: hidden;
 }
 
 strong {
@@ -319,6 +323,7 @@ strong {
   /* Because we want header to be sticky later, we used a fixed height */
   height: 9.6rem;
   padding: 0 4.8rem;
+  position: relative;
 }
 
 .logo {
@@ -364,11 +369,29 @@ strong {
 .main-nav-link.nav-cta:active {
   background-color: var(--dark-primary);
 }
+
+/* MOBILE NAVIGATION */
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4.8rem;
+  width: 4.8rem;
+  color: var(--dark-gray);
+}
+
+.icon-mobile-nav[name="close-outline"] {
+  display: none;
+}
 /* *************************
       HERO SECTION
 ****************************
  */
-
 .section-hero {
   background-color: var(--light-primary);
   padding: 4.8rem 0 9.6rem 0;
