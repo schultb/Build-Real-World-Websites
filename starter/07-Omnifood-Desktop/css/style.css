@@ -101,6 +101,8 @@ SPACING SYSTEM (px)
 html {
   font-size: 62.5%;
   overflow-x: hidden;
+
+  /* Scroll behavior does NOT work on Safari browser or Edge browser */
   scroll-behavior: smooth;
 }
 
